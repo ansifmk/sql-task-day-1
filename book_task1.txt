@@ -1,0 +1,30 @@
+CREATE DATABASE LibraryDB;
+GO
+USE LibraryDB;
+GO
+
+CREATE TABLE Books(
+BookId INT IDENTITY(1,1)PRIMARY KEY,
+Title VARCHAR(200)NOT NULL,
+Author VARCHAR(100)NOT NULL,
+PublicationYear INT NOT NULL
+
+);
+INSERT INTO Books (Title, Author, PublicationYear)
+VALUES
+('The Alchemist', 'Paulo Coelho', 1988),
+('Wings of Fire', 'A. P. J. Abdul Kalam', 1999),
+('Harry Potter and the Philosopher''s Stone', 'J. K. Rowling', 1997),
+('Harry Potter and the Chamber of Secrets', 'J. K. Rowling', 1998),
+('Rich Dad Poor Dad', 'Robert Kiyosaki', 1997),
+('The Power of Habit', 'Charles Duhigg', 2012),
+('Atomic Habits', 'James Clear', 2018);
+
+SELECT * FROM Books
+WHERE PublicationYear=1997;
+
+SELECT * FROM Books
+WHERE Author ='J. K. Rowling';
+
+SELECT DISTINCT Author
+FROM Books;
