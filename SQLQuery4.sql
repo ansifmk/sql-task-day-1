@@ -66,7 +66,7 @@ LEFT JOIN Publishers p ON b.PublisherID = p.PublisherID;
 
 SELECT b.Title, a.AuthorName, p.PublisherName
 FROM Books b
-RIGHT JOIN Publishers p ON b.PublisherID = p.PublisherID
+RIGHT JOIN  Publishers p ON b.PublisherID = p.PublisherID
 LEFT JOIN Authors a ON b.AuthorID = a.AuthorID;
 
 SELECT b.Title, a.AuthorName, p.PublisherName
